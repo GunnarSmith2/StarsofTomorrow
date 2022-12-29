@@ -5,7 +5,12 @@ if (!process.env.MONGODB_URI) {
 }
 
 const uri = process.env.MONGODB_URI
-const options = {}
+const options = {
+  // useFindAndModify: true,
+  // useUnifiedTopology: true,
+  // useCreateIndex: true,
+  // useNewUrlParser: true
+}
 
 let client
 let clientPromise: Promise<MongoClient>

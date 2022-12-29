@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import clientPromise from '../lib/mongodb'
+import clientPromise from '../../../lib/mongodb'
 import { InferGetServerSidePropsType } from 'next'
+import { Db } from 'mongodb'
 
 // context goes in parentheses
 export async function getServerSideProps() {
@@ -14,6 +15,7 @@ export async function getServerSideProps() {
         //
         // Then you can execute queries against your database like so:
         // db.find({}) or any of the MongoDB Node Driver commands
+
 
         return {
             props: { isConnected: true },
