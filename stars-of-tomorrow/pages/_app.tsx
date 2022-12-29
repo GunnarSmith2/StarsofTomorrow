@@ -1,5 +1,5 @@
-import '../../styles/globals.css'
-import NextApp, { AppProps, AppContext } from 'next/app'
+import '../styles/globals.css';
+import NextApp, { AppProps, AppContext } from 'next/app';
 import { getCookie, setCookie } from 'cookies-next';
 import {MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
