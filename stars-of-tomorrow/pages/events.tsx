@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import clientPromise from '../lib/mongodb'
 import { InferGetServerSidePropsType } from 'next'
+import HeaderMegaMenu from './components/header'
+import { ActionToggle } from './components/Colormode'
 
 // context goes in parentheses
 export async function getServerSideProps() {
@@ -30,17 +32,19 @@ export default function Home({
     isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
     return (
-        <div className="container">
-            <Head>
-                <title>Events</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <main>
-                <h1>Events</h1>
-                <ul>
-                    <li>Spot for future events</li>
-                </ul>
-            </main>
-        </div>
+        <><div className='header'>
+            <HeaderMegaMenu />
+        </div><div className="container">
+                <Head>
+                    <title>Events</title>
+                    <link rel="icon" href="/favicon.ico" />
+                </Head>
+                <main>
+                    <h1>Events</h1>
+                    <ul>
+                        <li>Spot for future events</li>
+                    </ul>
+                </main>
+            </div></>
     )
 }  
