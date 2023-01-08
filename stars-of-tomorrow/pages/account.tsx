@@ -1,5 +1,5 @@
 import next from 'next';
-import { useToggle, upperFirst } from '@mantine/hooks';
+import { useToggle } from '@mantine/hooks';
 import {
     Box,
     TextInput,

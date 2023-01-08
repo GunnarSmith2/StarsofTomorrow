@@ -2,7 +2,8 @@ import Head from 'next/head'
 import clientPromise from '../lib/mongodb'
 import { InferGetServerSidePropsType } from 'next'
 import HeaderMegaMenu from './components/header'
-import { ActionToggle } from './components/Colormode'
+import EventModal from './components/CreateEvent'
+import { Container, Title, Text, Space, Group } from '@mantine/core'
 
 // context goes in parentheses
 export async function getServerSideProps() {
@@ -32,19 +33,29 @@ export default function Home({
     isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
     return (
-        <><div className='header'>
-            <HeaderMegaMenu />
-        </div><div className="container">
+        <>
                 <Head>
                     <title>Events</title>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
+                <header>
+                    <div className='header'>
+                        <HeaderMegaMenu />
+                    </div>
+                </header>
                 <main>
-                    <h1>Events</h1>
-                    <ul>
-                        <li>Spot for future events</li>
-                    </ul>
+                    <Container>
+                        <Group position='apart'>
+                        <Group>   
+                        <Title order={1} align='center'>Events</Title>
+                        </Group> 
+                        <EventModal />
+                        </Group>
+                    </Container>
+                    <Space h='lg' />
+                    <Title order={2}>No Events are Avaliable</Title>
+                    <Text fz='md'>Check back at another time</Text>
                 </main>
-            </div></>
+        </>
     )
 }  

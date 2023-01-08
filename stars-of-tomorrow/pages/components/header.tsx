@@ -136,7 +136,7 @@ export default function HeaderMegaMenu() {
   ));
 
   return (
-    <Box pb={120}>
+    <Box pb={20}>
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: '100%' }}>
           <MantineLogo size={30} />
@@ -183,7 +183,6 @@ export default function HeaderMegaMenu() {
 
           <Group className={classes.hiddenMobile}>
             <Button variant="default">Log in</Button>
-            <Button color="yellow">Sign up</Button>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
@@ -227,7 +226,6 @@ export default function HeaderMegaMenu() {
 
           <Group position="center" grow pb="xl" px="md">
             <Button variant="default">Log in</Button>
-            <Button color='yellow'>Sign up</Button>
           </Group>
         </ScrollArea>
       </Drawer>
