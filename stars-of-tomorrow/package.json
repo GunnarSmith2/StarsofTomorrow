@@ -26,6 +26,7 @@
     "@tiptap/extension-link": "^2.0.0-beta.209",
     "@tiptap/react": "^2.0.0-beta.209",
     "@tiptap/starter-kit": "^2.0.0-beta.209",
+    "@types/semver": "^7.3.13",
     "babel-loader": "^9.1.0",
     "cookies-next": "^2.1.1",
     "dayjs": "^1.11.7",
