@@ -179,14 +179,16 @@ export default function HittingData() {
 
             <Space h='xl' />
 
-            <Grid>
+            <Grid sx={{ borderBottom: 'solid' }}>
                 <Grid.Col span={3} sx={{ fontFamily: 'proxima-nova, Verdana, Arial, sans-serif', fontWeight: 900 }}>
                     Scouting Evaluation
                 </Grid.Col>
-                <Grid.Col span={3} offset={6} sx={{ fontFamily: 'proxima-nova, Verdana, Arial, sans-serif', fontWeight: 900 }}>
+                <Grid.Col span={3} offset={5.5} sx={{ fontFamily: 'proxima-nova, Verdana, Arial, sans-serif', fontWeight: 900 }}>
                     Grade
                 </Grid.Col>
             </Grid>
+
+            <Space h='xl' />
 
             <Grid>
                 <Grid.Col span={3} sx={{ color: 'yellow', fontFamily: 'proxima-noba, Verdana, Arial, sans-serif', fontWeight: 900, paddingTop: '1rem' }}>
